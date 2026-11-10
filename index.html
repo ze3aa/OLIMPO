@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OLIMPO | Horarios, planes e inscripción en línea</title>
+  <meta name="description" content="Consulta horarios de clases, compara planes e inscríbete en OLIMPO sin filas.">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#inicio"><img src="img/logo-blanco.png" alt="" width="40" height="40"><span>OLIMPO</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <nav id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#horarios">Horarios</a></li>
+        <li><a href="#galeria">Instalaciones</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a class="btn btn-small" href="#contacto">Inscríbete</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-text">
+        <h1>Conviertete en un verdadero Dios del Olimpo, NO existe el mañana, solo el HOY</h1>
+        <p>Consulta los horarios del día, elige tu plan y apártate un cupo en menos de un minuto.
+          Y RECUERDA, EL DOLOR DE HOY ES LA RECOMPENSA DEL MAÑANA.
+        </p>
+        <div class="actions">
+          <a class="btn" href="#horarios">Ver horarios de hoy</a>
+          <a class="btn btn-ghost" href="#planes">Comparar planes</a>
+        </div>
+      </div>
+      <figure class="hero-img">
+        <img src="img/clases.jpg" alt="Grupo de personas uniendo sus manos antes de una clase" width="736" height="980">
+      </figure>
+    </section>
+
+    <p class="promo">Primer mes gratis en cualquier plan · Estudiantes pagan la mitad del precio siempre y cuando muestren su carnet.</p>
+
+    <section id="planes" class="section">
+      <h2>Elige el plan que se ajusta a tu rutina</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>HERCULES</h3>
+          <p class="price">$89.000 <small>/mes</small></p>
+          <p class="student">Estudiantes: $44.500/mes</p>
+          <ul><li>Primer mes gratis</li><li>Sala de pesas y cardio</li><li>Lunes a viernes, 5:00 a 17:00</li><li>Evaluación inicial</li></ul>
+          <a class="btn btn-ghost" href="#contacto" data-plan="HERCULES">Elegir HERCULES</a>
+        </article>
+        <article class="card card-featured">
+          <h3>POSEIDON</h3>
+          <p class="price">$129.000 <small>/mes</small></p>
+          <p class="student">Estudiantes: $64.500/mes</p>
+          <ul><li>Primer mes gratis</li><li>Todo el horario, todos los días</li><li>Clases grupales ilimitadas</li><li>Evaluación inicial</li></ul>
+          <a class="btn" href="#contacto" data-plan="POSEIDON">Elegir POSEIDON</a>
+        </article>
+        <article class="card">
+          <h3>ZEUS</h3>
+          <p class="price">$169.000 <small>/mes</small></p>
+          <p class="student">Estudiantes: $84.500/mes</p>
+          <ul><li>Primer mes gratis</li><li>Todo lo del plan POSEIDON</li><li>2 sesiones al mes con entrenador</li><li>Plan de nutrición básico</li></ul>
+          <a class="btn btn-ghost" href="#contacto" data-plan="ZEUS">Elegir ZEUS</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="horarios" class="section section-alt">
+      <h2>Clases de la semana</h2>
+      <div class="tabs" role="tablist" aria-label="Días de la semana"></div>
+      <ul id="lista-clases" class="clases" aria-live="polite"></ul>
+    </section>
+
+    <section id="galeria" class="section">
+      <h2>Conoce nuestras instalaciones</h2>
+      <ul class="grid">
+        <li><button type="button"><img src="img/pesas.jpg" alt="Sala de pesas con mancuernas ordenadas en sus soportes" loading="lazy"></button></li>
+        <li><button type="button"><img src="img/cardio.jpg" alt="Zona de cardio con caminadoras frente a ventanales" loading="lazy"></button></li>
+        <li><button type="button"><img src="img/clases.jpg" alt="Comunidad de clases grupales reunida en círculo" loading="lazy"></button></li>
+        <li><button type="button"><img src="img/spinning.jpg" alt="Salón de spinning con bicicletas junto a ventanales" loading="lazy"></button></li>
+      </ul>
+      <dialog id="visor"><img src="" alt=""><button type="button" class="cerrar">Cerrar</button></dialog>
+    </section>
+
+    <section id="preguntas" class="section section-alt">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq">
+        <details><summary>¿Necesito experiencia para empezar?</summary><p>No. Todos los planes incluyen una evaluación inicial y un entrenador te orienta en tu primera semana.</p></details>
+        <details><summary>¿Cómo funciona el descuento para estudiantes?</summary><p>Pagas la mitad del precio de cualquier plan, siempre. Solo debes presentar tu carné estudiantil vigente al inscribirte. El primer mes es gratis en todos los planes.</p></details>
+        <details><summary>¿Puedo congelar mi plan?</summary><p>Sí, hasta 30 días al año presentando una solicitud en recepción.</p></details>
+        <details><summary>¿Cómo reservo una clase?</summary><p>En la sección de horarios, pulsa «Reservar» en la clase que quieras y completa el formulario.</p></details>
+        <details><summary>¿Hay parqueadero?</summary><p>Sí, tenemos parqueadero para bicicletas y motos sin costo.</p></details>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <h2>Inscríbete o reserva tu clase</h2>
+      <form id="form" novalidate>
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" name="nombre" type="text" required autocomplete="name">
+        <label for="correo">Correo electrónico</label>
+        <input id="correo" name="correo" type="email" required autocomplete="email">
+        <label for="tel">Teléfono celular</label>
+        <input id="tel" name="tel" type="tel" required pattern="[0-9]{10}" placeholder="3001234567" autocomplete="tel">
+        <label for="plan">Plan de interés</label>
+        <select id="plan" name="plan" required>
+          <option value="">Selecciona un plan</option>
+          <option>HERCULES</option><option>POSEIDON</option><option>ZEUS</option>
+        </select>
+        <label for="mensaje">Mensaje (opcional)</label>
+        <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+        <label class="check" for="estudiante"><input id="estudiante" name="estudiante" type="checkbox"> Soy estudiante (descuento del 50%)</label>
+        <button class="btn" type="submit">Enviar solicitud</button>
+        <p id="estado" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>OLIMPO</strong> · Calle 72 # 10-34, Bogotá</p>
+    <p>Lunes a sábado 5:00 a 21:00 · <a href="mailto:ze3aa@hotmail.com">ze3aa@hotmail.com</a></p>
+    <p><small>Proyecto académico de la asignatura INGENIERIA WEB 1. Hecho por Sebastian Orlando Ramos Gonzalez © <span id="anio"></span></small></p>
+  </footer>
+</body>
+</html>
